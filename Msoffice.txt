@@ -1,0 +1,27 @@
+Chuyển đổi Office 2016 Retail sang Office 2016 VL và kích hoạt.
+
+cscript slmgr.vbs /upk de52bd50-9564-4adc-8fcb-a345c17f84f9
+cscript slmgr.vbs /upk 84832881-46ef-4124-8abc-eb493cdcf78e
+cscript slmgr.vbs /upk 70d9ceb6-6dfa-4da4-b413-18c1c3c76e2e
+if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16"
+if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16"
+cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-pl.xrm-ms"
+cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-ppd.xrm-ms"
+cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-ul-oob.xrm-ms"
+cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-ul-phn.xrm-ms"
+cscript ospp.vbs /inpkey:RBYRN-HYB2G-2HWWK-KRR2G-6F4HM
+cscript //nologo ospp.vbs /act | findstr /c:"activation" /c:"successful" /c:"exceeded" /c:"blocked"
+cscript //nologo ospp.vbs /dinstid > step2.txt
+start step2.txt
+@
+
+
+if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16"
+if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16"
+cscript //nologo ospp.vbs /actcid:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+start winword
+exit
+
+
+
+https://webact.truonghuynhit.com/
