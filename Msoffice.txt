@@ -9,7 +9,7 @@ cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-pl.xrm-ms"
 cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-ppd.xrm-ms"
 cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-ul-oob.xrm-ms"
 cscript ospp.vbs /inslic:"..\root\Licenses16\ProPlusVL_MAK-ul-phn.xrm-ms"
-cscript ospp.vbs /inpkey:RBYRN-HYB2G-2HWWK-KRR2G-6F4HM
+cscript ospp.vbs /inpkey:xxxx-xxxx-xxxx-xxxx-xxxx
 cscript //nologo ospp.vbs /act | findstr /c:"activation" /c:"successful" /c:"exceeded" /c:"blocked"
 cscript //nologo ospp.vbs /dinstid > step2.txt
 start step2.txt
